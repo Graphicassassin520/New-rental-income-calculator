@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeshare Rental Income Projection Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Timeshare Rental Income Projection Calculator</h1>
+        <form id="projection-form">
+            <label for="resort">Select Resort:</label>
+            <select id="resort" required>
+                <option value="" disabled selected>Select a resort</option>
+                <option value="ormond">Ormond Beach</option>
+                <option value="hilton">Hilton Head</option>
+                <option value="branson">Branson</option>
+            </select>
+
+            <label for="weekType">Select Week Type:</label>
+            <select id="weekType" required>
+                <option value="" disabled selected>Select a week type</option>
+                <option value="offseason">Offseason</option>
+                <option value="standard">Standard</option>
+                <option value="peak">Peak</option>
+                <option value="event">Event Week</option>
+            </select>
+
+            <label for="unit">Select Unit Size:</label>
+            <select id="unit" required>
+                <option value="" disabled selected>Select a unit size</option>
+                <option value="studio">Studio</option>
+                <option value="1br">1 Bedroom</option>
+                <option value="2br">2 Bedroom</option>
+                <option value="2br-lockout">2 Bedroom Lockout</option>
+                <option value="3br">3 Bedroom</option>
+            </select>
+
+            <label for="weeks">Number of Weeks:</label>
+            <input type="number" id="weeks" min="1" max="52" value="1" required>
+
+            <button type="button" id="calculate">Calculate</button>
+        </form>
+        <div id="loading" class="hidden">Calculating...</div>
+        <div id="result"></div>
+        <div id="error-message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
